@@ -1,7 +1,7 @@
 1. Clone this repo, and `cd` to the cloned directory
 2. `npm install`
 3. Replace `BROKER_LIST` in **constants.js** with a set of brokers you have access to create topics and publish to
-4. Run a few parallel instances of **runner.js** in parallel in separate terminals using `node runner.js`
+4. Run a few instances of **runner.js** in parallel in separate terminals using `node runner.js`
 5. Wait a few minutes for all messages to be consumed
 
 This will:
