@@ -5,5 +5,5 @@ module.exports = {
   NUM_MESSAGES: 1200,
   OUT_FILE: "results.csv",
   PARTITIONS: 6,
-  TOPIC: "rebalance.test.35",
+  TOPIC: "rebalance.test.36",
 }
