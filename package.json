@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "kafkajs": "~1.15.0"
+    "kafkajs": "github:feydan/kafkajs#is-stale-generationId"
   }
 }

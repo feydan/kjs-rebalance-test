@@ -15,7 +15,7 @@ module.exports = {
       args.commitOffsetsIfNecessary(args.uncommittedOffsets());
 
     for (const message of batch.messages) {
-      if (!args.isRunning()) {
+      if (!args.isRunning() || args.isStale()) {
         break;
       }
 
