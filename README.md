@@ -2,8 +2,8 @@
 2. `npm install`
 3. Replace `BROKER_LIST` in **constants.js** with a set of brokers you have access to create topics and publish to
    - Alternatively, you can spin up kafka/zookeper locally with `docker-compose up`
-4. Run a few instances of **runner.js** in parallel in separate terminals using `node runner.js`
-5. Wait a few minutes for all messages to be consumed
+4. Run 1 instance of **runner.js** using `node runner.js`
+5. Wait a 7-8 minutes for consumers to disconnect and reconnect
 
 This will:
 
