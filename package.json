@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "kafkajs": "~1.15.0"
+    "kafkajs": "github:andrewreineke/kafkajs#1.12-with-setImmediate"
   }
 }
