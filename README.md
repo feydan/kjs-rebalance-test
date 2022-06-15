@@ -7,13 +7,21 @@
 
 This will:
 
-- Create a topic and publish 1200 messages to it
+- Set kafka offsets.retention.minutes to 3 and offsets.retention.check.interval.ms to 60000
+- Create a topic and publish 10 messages to it
 - Initialize consumers where each message is logged as a new line to **results.csv**
-- (Each consumer will occaisionally disconnect/re-subscribe every few seconds to trigger rebalances)
+- Connect the consumer for 6 minutes
+- Stop the consumer for 1 minute
+- Restart the consumer
 
-EXPECTED: **results.csv** almost always contains 1200 entries
+The intention was to try to recreate a potential offset retention issue that was encountered on a stale topic.  The theory was that:
+ 
+ - Given a consumer on stale topic that hasn't had new messages for more than the retention window (and the consumer has not had commits for longer than the retention window)
+ - If the consumer enters an empty state, it will reset offsets when reconnected.
 
-ACTUAL: **results.csv** almost always contains 1400-1600 entries due to redeliveries
+EXPECTED: **results.csv** almost always contains 10 entries
+
+ACTUAL: **results.csv** <not able to recreate issue>
 
 ## References
 
